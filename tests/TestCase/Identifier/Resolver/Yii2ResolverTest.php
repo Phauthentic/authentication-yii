@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Authentication\Test\TestCase\Identifier\Resolver;
 
+use ArrayAccess;
 use Authentication\Identifier\Resolver\Yii2Resolver;
 use Authentication\Test\TestCase\AuthenticationTestCase as TestCase;
 use PHPUnit\DbUnit\DataSet\ArrayDataSet;
@@ -54,6 +55,6 @@ class Yii2ResolverTest extends TestCase
             'username' => 'florian',
         ]);
 
-        $this->assertInternalType('array', $result);
+        $this->assertInstanceOf(ArrayAccess::class, $result);
     }
 }

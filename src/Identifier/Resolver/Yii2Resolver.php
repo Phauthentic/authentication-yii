@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Authentication\Identifier\Resolver;
 
+use ArrayAccess;
+use ArrayObject;
 use Authentication\Identifier\Resolver\ResolverInterface;
 use yii\db\ActiveRecord;
 use yii\db\Connection;
@@ -41,7 +43,7 @@ class Yii2Resolver implements ResolverInterface
     /**
      * @inheritDoc
      */
-    public function find(array $conditions)
+    public function find(array $conditions): ArrayAccess
     {
         $query = $this->userModel->find();
 
@@ -56,12 +58,10 @@ class Yii2Resolver implements ResolverInterface
             return null;
         }
 
-        $result = $result->toArray();
-
-        if (is_array($result)) {
-            return $result;
+        if (!is_array($result)) {
+            $result = $result->toArray();
         }
 
-        return null;
+        return new ArrayObject($result);
     }
 }
