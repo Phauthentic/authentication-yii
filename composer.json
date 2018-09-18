@@ -17,7 +17,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Authentication\\": [
+            "Phauthentic\\Authentication\\": [
                 "src/",
                 "vendor/cakephp/authentication/src/"
             ]
@@ -25,7 +25,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Authentication\\Test\\": [
+            "Phauthentic\\Authentication\\Test\\": [
                 "tests/",
                 "vendor/cakephp/authentication/tests/"
             ]

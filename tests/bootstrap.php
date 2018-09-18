@@ -5,7 +5,7 @@ define('YII_DEBUG', true);
 define('YII_ENV', 'dev');
 
 if (!function_exists('env')) {
-    function env ($varname) {
+    function env($varname) {
         return getenv($varname);
     }
 }

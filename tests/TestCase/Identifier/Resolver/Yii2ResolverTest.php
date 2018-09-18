@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Authentication\Test\TestCase\Identifier\Resolver;
+namespace Phauthentic\Authentication\Test\TestCase\Identifier\Resolver;
 
 use ArrayAccess;
-use Authentication\Identifier\Resolver\Yii2Resolver;
-use Authentication\Test\TestCase\AuthenticationTestCase as TestCase;
+use Phauthentic\Authentication\Identifier\Resolver\Yii2Resolver;
+use Phauthentic\Authentication\Test\TestCase\AuthenticationTestCase as TestCase;
 use PHPUnit\DbUnit\DataSet\ArrayDataSet;
 use PHPUnit\DbUnit\DataSet\IDataSet;
 use Yii;

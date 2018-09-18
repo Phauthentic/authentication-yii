@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Authentication\Identifier\Resolver;
+namespace Phauthentic\Authentication\Identifier\Resolver;
 
 use ArrayAccess;
 use ArrayObject;
-use Authentication\Identifier\Resolver\ResolverInterface;
+use Phauthentic\Authentication\Identifier\Resolver\ResolverInterface;
 use yii\db\ActiveRecord;
 use yii\db\Connection;
 
